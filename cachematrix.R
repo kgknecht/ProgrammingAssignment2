@@ -1,9 +1,17 @@
-## The following functions help to cache the inverse of a matrix, a
-## computation which is computationally costly if done repeatedly. 
+###########
+## Programming Assignment 2: Lexical Scoping
+##
+## The following code has been written for the second programming assignment 
+## in the "R Programming" course on coursera conducted by Roger D. Peng, 
+## Johns Hopkins University.
+##
+## Description:
+## The functions makeCacheMatrix and cacheSolve help to cache the inverse of 
+## a matrix, a computation which is computationally costly if done repeatedly. 
+###########
 
-## These functions have been solved as an assignment in the "R Programming"
-## course conducted by Roger D. Peng, Johns Hopkins University.
-
+###########
+## Function 1: makeCacheMatrix
 ## This function creates a special matrix object that caches its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -18,7 +26,8 @@ makeCacheMatrix <- function(x = matrix()) {
     list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
 
-
+###########
+## Function 2: cacheSolve
 ## This function computes the inverse of the special matrix returned by 
 ## makeCacheMatrix. If the inverse has already been calculated and the 
 ## matrix has not changed, then cacheSolve retrieves the inverse from 
